@@ -67198,18 +67198,18 @@ var rp = __nccwpck_require__(8607);
 
 
 const options = {
-    method: "GET",
-    uri: "https://icanhazdadjoke.com/",
-    headers: {
-        Accept: "application/json",
-        "User-Agent": "Writing JavaScript action GitHub Skills exercise.",
-    },
-    json: true,
+  method: "GET",
+  uri: "https://icanhazdadjoke.com/",
+  headers: {
+    Accept: "application/json",
+    "User-Agent": "Writing JavaScript action GitHub Skills exercise.",
+  },
+  json: true,
 };
 
 async function getJoke() {
-    const res = await rp(options);
-    return res.joke;
+  const res = await rp(options);
+  return res.joke;
 }
 
 /* harmony default export */ const src_joke = (getJoke);
@@ -67376,7 +67376,7 @@ function file_command_prepareKeyValueMessage(key, value) {
     if (key.includes(delimiter)) {
         throw new Error(`Unexpected input: name should not contain the delimiter "${delimiter}"`);
     }
-    if (convertedValue?.includes(delimiter)) {
+    if (convertedValue.includes(delimiter)) {
         throw new Error(`Unexpected input: value should not contain the delimiter "${delimiter}"`);
     }
     return `${key}<<${delimiter}${external_os_.EOL}${convertedValue}${external_os_.EOL}${delimiter}`;
@@ -70163,9 +70163,9 @@ function getIDToken(aud) {
 
 
 async function run() {
-    const joke = await src_joke;
-    console.log(joke);
-    setOutput("joke", joke);
+  const joke = await src_joke();
+  console.log(joke);
+  setOutput("joke", joke);
 }
 
 run();
