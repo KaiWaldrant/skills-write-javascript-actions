@@ -2,9 +2,8 @@ name: "Joke Action"
 description: "Fetches a random joke and exposes it as an output"
 
 outputs:
-  jokes:
-    description: "The fetched joke  text"
-
+  joke:
+    description: "The fetched joke text"
 
 runs:
   using: node24
