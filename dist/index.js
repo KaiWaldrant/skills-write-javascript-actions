@@ -67376,7 +67376,7 @@ function file_command_prepareKeyValueMessage(key, value) {
     if (key.includes(delimiter)) {
         throw new Error(`Unexpected input: name should not contain the delimiter "${delimiter}"`);
     }
-    if (convertedValue.includes(delimiter)) {
+    if (convertedValue?.includes(delimiter)) {
         throw new Error(`Unexpected input: value should not contain the delimiter "${delimiter}"`);
     }
     return `${key}<<${delimiter}${external_os_.EOL}${convertedValue}${external_os_.EOL}${delimiter}`;
